@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MAS_MP01
 {
-    class Invoice
+    public class Invoice
     {
         int recipientTaxId; 
         int recepeeTaxId; 
@@ -17,6 +17,7 @@ namespace MAS_MP01
             this.subject = subject;
         }
 
+        // atrybut pochodny
         public double price
         {
             get
@@ -32,6 +33,7 @@ namespace MAS_MP01
             }
         }
 
+        // przesłonięcie
         public override string ToString()
         {
             return $"Recipient: {recipientTaxId}, recepee: {recepeeTaxId}, price: {price}";

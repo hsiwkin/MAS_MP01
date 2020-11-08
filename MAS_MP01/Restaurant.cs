@@ -4,11 +4,13 @@ using System.Text;
 
 namespace MAS_MP01
 {
-    class Restaurant
+    public class Restaurant
     {
         public int taxId { get; set; }
         public Address address { get; set; }
         public Register register { get; set; }
+
+        // atrybut klasowy
         static List<Restaurant> allRestaurants = new List<Restaurant>();
 
         public Restaurant()
@@ -16,16 +18,19 @@ namespace MAS_MP01
             AddRestaurant(this);
         }
 
+        // metoda klasowa
         public static void AddRestaurant(Restaurant restaurant)
         {
             allRestaurants.Add(restaurant);
         }
 
+        // metoda klasowa
         public static void RemoveRestaurant(Restaurant restaurant)
         {
             allRestaurants.Remove(restaurant);
         }
 
+        // metoda klasowa
         public static void PrintAllRestaurants()
         {
             Console.WriteLine("Extent of the class: " + typeof(Restaurant));

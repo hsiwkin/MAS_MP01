@@ -4,15 +4,24 @@ using System.Text;
 
 namespace MAS_MP01
 {
-    class Ingridient
+    public class Ingridient
     {
-        string name;
-        public int price { get; }
+        public static Address WarehouseAddress { get; set; }
+
+        // atrybut prosty
+        public string Name { get; }
+        public int Price { get; }
 
         public Ingridient(string name, int price) 
         {
-            this.name = name;
-            this.price = price;
+            this.Name = name;
+            this.Price = price;
+        }
+
+        // metoda klasowa
+        public static string ShowWarehouseAddress()
+        {
+            return WarehouseAddress.ToString();
         }
     }
 }

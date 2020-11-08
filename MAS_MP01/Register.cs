@@ -4,8 +4,9 @@ using System.Text;
 
 namespace MAS_MP01
 {
-    class Register
+    public class Register
     {
+        // atrybut powtarzalny
         List<Invoice> allInvoices = new List<Invoice>();
 
         public void AddInvoice(Invoice invoice)

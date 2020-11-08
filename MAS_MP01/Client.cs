@@ -4,9 +4,12 @@ using System.Text;
 
 namespace MAS_MP01
 {
-    class Client : Person
+    [Serializable]
+    public class Client : Person
     {
         public int taxId { get; set; }
+        // Atrybut złożony
+        public Address postalAddress { get; set; }
 
         public Client(string firstName, string lastName) : base(firstName, lastName)
         {    

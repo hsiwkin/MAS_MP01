@@ -4,7 +4,8 @@ using System.Text;
 
 namespace MAS_MP01
 {
-    class Employee : Person
+    [Serializable]
+    public class Employee : Person
     {
         public int salary { get; set; }
         public int employeeId { get; set; }
@@ -13,6 +14,7 @@ namespace MAS_MP01
         {
         }
 
+        // przesłonięcie
         public new string GetIdentificationString()
         {
             return $"{base.GetIdentificationString()}: {employeeId}";
